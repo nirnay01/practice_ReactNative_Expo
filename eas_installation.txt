@@ -1,0 +1,19 @@
+//for install
+npm install -g eas-cli
+
+//for login
+eas 
+eas login    //only once
+eas whoami   //check if you are logged in
+
+//changes for build
+in eas.json:
+    "preview": {
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk"
+      }
+    }
+
+//for build
+eas build -p android --profile preview
